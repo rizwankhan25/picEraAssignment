@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+section {
+  position: relative;
+}
+
+.photo-album {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 98vh;
+}
+
+/* Main Image */
+.main-image {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease; /* Optional zoom effect on hover */
+  margin-top: 15px;
+}
+
+/* Small Images */
+.small-images {
+  width: 100%; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.small-images img {
+  /* width: calc(100% / 3 - 12px); */
+  height: 40vh; 
+  object-fit: cover; 
+  overflow: hidden;
+  transition: transform 0.3s ease; 
+}
+
+.small-images img:hover {
+  transform: scale(1.05); 
+}
+.main-image img:hover {
+  transform: scale(1.05); 
+}
+.pagination {
+  position: absolute;
+  top: 55%;
+  left: 1%;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
